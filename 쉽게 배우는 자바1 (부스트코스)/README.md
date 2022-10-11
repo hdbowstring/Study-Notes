@@ -91,8 +91,43 @@
    - 변수(Variable)를 지정할 떄 데이터 타입 먼저 선언
    - 변수의 데이터 타입을 바로바로 판단할 수 있게하기 위함
    - 변수는 재사용, 수정에 용이, 코드의 이름을 잘 지으면 가독성 향상
+   - int, double, String
    - casting : 데이터 타입 변환 (자료형 변환하는 연산)
    
-### 2.3. 9장
+### 2.3. 9~10장
    - 프로그램 : 음악회와 같은 곳에서 연주할 곡들의 순서를 나타내는 것
    - 컴퓨터 언어를 이용해서 프로그램을 만드는 것은 업무의 자동화된 처리를 위해서
+   - 괄호로 시작, 괄호로 끝나는 것 메서드라고 함
+   - 컨트롤 + 스페이스 하고 필요한 것 클릭하면 임포트문까지 자동으로 써줌
+   - 디버거
+   - 멈추고 싶은 줄 왼쪽 클릭하여 브레이크 포인터 만들기 디버거로 실행하는? 벌레버튼 누르기
+   - Step over는 명령어 하나만 실행
+   - 터미네이트는 디버거 종료
+   
+## 3. Java 프로그래밍 시작하기
+
+### 3.1. 11~12장
+
+    - JOptionPane 객체의 showInputDialog 메소드를 이용하면 입력 다이어로그 창을 이용해서 id 값을 입력
+    - Arguments (인자)
+    - Argument 탭에서 Program arguments에 입력
+    - 아규먼트를 입력하게 되면 main 메소드의 args 파라미터는 아규먼트 값을 받아서 동작
+    - args는 문자열 배열(array)
+    - 직접 컴파일하고 실행하기 (운영체제에 대한 지식 필요)
+    - cmd 켜서 javac, java 이용 : javac -cp ".;lib" OkjavaGoinHome.java
+    - 외부 라이브러리도 포함해서 실행 : java -cp ".;lib" OkjavaGoinHome
+    - 아규먼트 입력하기 : java OkjavaGoinHomeinput "JAVA APT 507" 15.0
+    
+### 3.2. 13장
+   
+    - 자바는 자바의 도구들을 응용해서 사용하기 위해서 일정한 조작 장치를 구성 : 자바 API(Application Programming Interface)
+    - 사용자가 자바 프로그램을 사용할 수 있도록 만들어둔 장치들을 UI(User Interface)
+    - Package : Class 묶음
+    - Class : 서로 연관된 변수, 메서드 묶음
+    - Instance : 인스턴스는 클래스를 컴퓨터 상에서 실체화한 것
+    - Math 클래스와 달리 PrintWriter 객체는 new 키워드를 통해 인스턴스를 생성하여 사용
+    - 인스턴스를 생성할 수 있는 클래스는 자바 API Documentation에 Constructor Summary가 존재
+    - 상속 : 자식에 해당하는 클래스는 부모에 해당하는 클래스의 모든 변수와 메소드를 사용할 수 있음
+    - 이클립스 안에서 Open Type hierarchy를 이용하여 클래스의 상속관계를 확인
+    - Object 클래스는 모든 클래스의 부모
+    - 자식이 부모의 메소드와 이름이 똑같은 걸 사용한다면 자식의 것을 씀 (override)
