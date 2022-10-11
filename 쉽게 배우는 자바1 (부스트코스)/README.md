@@ -108,26 +108,37 @@
 
 ### 3.1. 11~12장
 
-    - JOptionPane 객체의 showInputDialog 메소드를 이용하면 입력 다이어로그 창을 이용해서 id 값을 입력
-    - Arguments (인자)
-    - Argument 탭에서 Program arguments에 입력
-    - 아규먼트를 입력하게 되면 main 메소드의 args 파라미터는 아규먼트 값을 받아서 동작
-    - args는 문자열 배열(array)
-    - 직접 컴파일하고 실행하기 (운영체제에 대한 지식 필요)
-    - cmd 켜서 javac, java 이용 : javac -cp ".;lib" OkjavaGoinHome.java
-    - 외부 라이브러리도 포함해서 실행 : java -cp ".;lib" OkjavaGoinHome
-    - 아규먼트 입력하기 : java OkjavaGoinHomeinput "JAVA APT 507" 15.0
+  - JOptionPane 객체의 showInputDialog 메소드를 이용하면 입력 다이어로그 창을 이용해서 id 값을 입력
+  - Arguments (인자)
+  - Argument 탭에서 Program arguments에 입력
+  - 아규먼트를 입력하게 되면 main 메소드의 args 파라미터는 아규먼트 값을 받아서 동작
+  - args는 문자열 배열(array)
+  - 직접 컴파일하고 실행하기 (운영체제에 대한 지식 필요)
+  - cmd 켜서 javac, java 이용 : javac -cp ".;lib" OkjavaGoinHome.java
+  - 외부 라이브러리도 포함해서 실행 : java -cp ".;lib" OkjavaGoinHome
+  - 아규먼트 입력하기 : java OkjavaGoinHomeinput "JAVA APT 507" 15.0
     
 ### 3.2. 13장
    
-    - 자바는 자바의 도구들을 응용해서 사용하기 위해서 일정한 조작 장치를 구성 : 자바 API(Application Programming Interface)
-    - 사용자가 자바 프로그램을 사용할 수 있도록 만들어둔 장치들을 UI(User Interface)
-    - Package : Class 묶음
-    - Class : 서로 연관된 변수, 메서드 묶음
-    - Instance : 인스턴스는 클래스를 컴퓨터 상에서 실체화한 것
-    - Math 클래스와 달리 PrintWriter 객체는 new 키워드를 통해 인스턴스를 생성하여 사용
-    - 인스턴스를 생성할 수 있는 클래스는 자바 API Documentation에 Constructor Summary가 존재
-    - 상속 : 자식에 해당하는 클래스는 부모에 해당하는 클래스의 모든 변수와 메소드를 사용할 수 있음
-    - 이클립스 안에서 Open Type hierarchy를 이용하여 클래스의 상속관계를 확인
-    - Object 클래스는 모든 클래스의 부모
-    - 자식이 부모의 메소드와 이름이 똑같은 걸 사용한다면 자식의 것을 씀 (override)
+  - 자바는 자바의 도구들을 응용해서 사용하기 위해서 일정한 조작 장치를 구성 : 자바 API(Application Programming Interface)
+  - 사용자가 자바 프로그램을 사용할 수 있도록 만들어둔 장치들을 UI(User Interface)
+  - Package : Class 묶음
+  - Class : 서로 연관된 변수, 메서드 묶음
+  - Instance : 인스턴스는 클래스를 컴퓨터 상에서 실체화한 것
+  - Math 클래스와 달리 PrintWriter 객체는 new 키워드를 통해 인스턴스를 생성하여 사용
+  - 인스턴스를 생성할 수 있는 클래스는 자바 API Documentation에 Constructor Summary가 존재
+  - 상속 : 자식에 해당하는 클래스는 부모에 해당하는 클래스의 모든 변수와 메소드를 사용할 수 있음
+  - 이클립스 안에서 Open Type hierarchy를 이용하여 클래스의 상속관계를 확인
+  - Object 클래스는 모든 클래스의 부모
+  - 자식이 부모의 메소드와 이름이 똑같은 걸 사용한다면 자식의 것을 씀 (override)
+  
+### 3.3 14장
+  
+  - 회계앱 만들어보기
+  - 이클립스에서 search 혹은 Find/Replace로 한꺼번에 변경가능
+  - 변수로 지정하고자 하는 값을 지우고 이름을 바로 입력하면 이클립스에서 변수 생성을 도와줌
+  - Alt + Shift + L : 우클릭 - 리팩터 - Extract Local Variable 한번에 변수로 만들기
+  - Alt + 방향키 : 한줄 이동
+  - 이렇게 프로그램의 기능은 바꾸지 않으면서 이해하기 쉽게 바꾸는 과정을 **리팩토링**
+  - .class파일 복사해서 가져가면 다른컴터에서도 실행가능 (자바 런타임 환경이 있어야됨)
+  - 
