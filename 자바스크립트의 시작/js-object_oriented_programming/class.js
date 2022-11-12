@@ -6,7 +6,7 @@ class Person{
         console.log('constructor');
     }
     sum(){
-        return this.first+this.second;
+        return this.first+this.second; // 이 메소드는 객체의 소속이 아니고 객체의 프로토타입 소속이기 때문에 person을 이용해 생성되는 모든 객체가 공유하는 함수.
     }
 //     avg(){
 //         return (this.first+this.second)/2;
@@ -17,10 +17,10 @@ class Person{
 // Person.prototype.sum = function(){
 //     return 'prototype : '+(this.first+this.second);
 }
-class PersonPlus extends Person{
+class PersonPlus extends Person{ //부모의 코드를 재활용하면서 자식만의 작업을 할 수도 있다.
     constructor(name, first, second, third){
         super(name, first, second); // super()는 부모클래스의 생성자
-        this.third = third;
+        this.third = third; 
     }
     sum(){
         return super.sum()+this.third;
