@@ -17,7 +17,37 @@
   - vscode 터미널에서 "npm run start" 명령을 통해서 실행시킬 수 있음 
 
 ## 2. 리액트 맛보기
-
+  - create-react-app이 제공하는 샘플 애플리케이션을 수정해보기
+  - 디렉토리 구조 : src, public
+  - public : index.html이 있음
+  - index.html에는 id="root"가 있고 컴포넌트들을 이 안에 들어가도록 create-react-app은 약속해놓음
+  - 개발자 도구에서 확인할 수 있음
+  - 이 컴포넌트들은 src 디렉토리 안의 파일을 수정해서 만들 수 있음
+  - 개발작업의 대부분의 파일은 src 디렉토리 안에 넣게 됨
+  - 엔트리 파일, 즉 진입파일은 index.js
+  - ReactDOM.render( <APP/> , document.getElementById('root') );
+  - id값이 root인 태그를 선택하는 자바스크립트의 선택자같은 문법
+  - <APP/> : 리액트를 통해 만든 사용자 정의 태그, 즉 컴포넌트
+  - create-react-app이 sample로 만든 <APP/> 컴포넌트의 실제 구현은 "import" 를 통해서 불러온 src 안의 App.js 파일
+  - 개발을 할 때는 App.js라는 파일 안의 내용을 "Hello, REACT!!" 로 수정을 하게 된다면
+  - create-react-app으로 구축한 환경에 의해서 파일을 수정할 때마다 자동으로 웹 브라우저를 reload 해줌
+  - 이 때 반드시 리액트는 하나의 태그 안 쪽에 나머지 태그들이 있어야 함. 가장 바깥쪽에는 태그 하나가 있어야함
+  - CSS 수정하기
+  - import './App.css';
+  - App.js 에 있는 위 코드는 app.js 안에 있는 react의 컴포넌트가 로드됐을 때 app.css도 로드
+  - 즉, App 이라고 하는 컴포넌트의 디자인을 App안에 넣는 것
+  - deploy 하기
+  - create-react-app은  빌드할 때 "npm run build" 명령을 사용, 디렉토리 구조에 "build"라고 하는 파일이 추가
+  - "build" 디렉토리 안에 있는 "index.html" 파일은 공백이 하나도 없는 상태
+  - create-react-app이 실제 프로덕션 환경에서 사용되는 앱을 만들기 위해서 index.html 파일에서 공백과 같이 불필요하게 용량을 차지하는 정보를 제거했기 때문
+  - 결론적으로 실제로 서비스할 때는 build안에 있는 파일들을 사용
+  - Web Server가 문서를 찾는 최상위 디렉토리 "Document root" 에 build 디렉토리 안 쪽에 있는 파일들을 위치시킴
+  - 이 과정을 통해 실서버환경이 완성
+  - "serve" 라고 하는 npm을 통해 설치할 수 있는 간단한 웹서버가 있음
+  - npx serve -s build 을 실행하면 serve라는 한번만 실행시킬 웹서버를 다운로드 받을 수 있음
+  - "-s build" 옵션은 build라는 디렉토리를 document root로 하는 옵션
+  - 명령어를 실행하여 생성된 웹 서버로 접속 할 수 있는 주소를 확인하고 접속하면 개발환경의 APP은 동작하는 모습은 똑같지만 전체용량이 확 줄어들었음을 확인가능
+  
 ## 3. state와 props
 
 ## 4. 리액트의 이벤트
